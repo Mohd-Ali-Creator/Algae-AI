@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALGAE-OPT AI | Advanced Biofuel Optimization</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon" onclick="">🌿</span>
+                    <h1>ALGAE-OPT AI</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                        <li><a href="#" class="nav-link" data-page="dashboard">Dashboard</a></li>
+                        <li><a href="#" class="nav-link" data-page="simulator">Simulator</a></li>
+                        <li><a href="#" class="nav-link" data-page="economics">Economics</a></li>
+                        <li><a href="#" class="nav-link" data-page="research">Research</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <div class="container">
+                <h2>Optimize Algae Biofuel Production with AI</h2>
+                <p>ALGAE-OPT AI uses real data and machine learning to help Indian algae farmers maximize oil yield while minimizing costs and environmental impact.</p>
+                <a href="#" class="btn btn-primary nav-link" data-page="dashboard">Launch Dashboard</a>
+                <a href="#" class="btn nav-link" data-page="simulator">Try Simulator</a>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="card">
+                <h3>📊 Real Data from Indian Context</h3>
+                <p>Our platform uses actual research data tailored for Indian climate and economic conditions:</p>
+                
+                <div class="dashboard-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Typical Oil Yield in India</div>
+                        <div class="kpi-value">40,000 L/ha</div>
+                        <div class="kpi-label">per year</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Production Cost</div>
+                        <div class="kpi-value">₹65-85/L</div>
+                        <div class="kpi-label">Current range</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Market Price</div>
+                        <div class="kpi-value">₹80-120/L</div>
+                        <div class="kpi-label">Biofuel oil</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">CO2 Consumption</div>
+                        <div class="kpi-value">1.8-2.0 kg</div>
+                        <div class="kpi-label">per kg biomass</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>🎯 Why Algae Biofuel for India?</h3>
+                <div class="dashboard-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Land Efficiency</div>
+                        <div class="kpi-value">30x</div>
+                        <div class="kpi-label">More oil per hectare than soybeans</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Water Recycling</div>
+                        <div class="kpi-value">80%</div>
+                        <div class="kpi-label">Water can be reused</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Wastewater Use</div>
+                        <div class="kpi-value">Yes</div>
+                        <div class="kpi-label">Can treat wastewater</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Job Creation</div>
+                        <div class="kpi-value">50-100</div>
+                        <div class="kpi-label">Jobs per 100 hectares</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Page -->
+    <section id="dashboard" class="page">
+        <div class="container">
+            <div class="card">
+                <h1>📈 Production Dashboard</h1>
+                <p>Real-time monitoring and optimization of your algae biofuel operation</p>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">Current Oil Production</div>
+                    <div class="kpi-value">125 L/day</div>
+                    <div class="kpi-label">+8% from last month</div>
+                </div>
+                
+                <div class="kpi-card">
+                    <div class="kpi-label">Production Cost</div>
+                    <div class="kpi-value">₹72/L</div>
+                    <div class="kpi-label">-5% optimization achieved</div>
+                </div>
+                
+                <div class="kpi-card">
+                    <div class="kpi-label">CO2 Sequestered</div>
+                    <div class="kpi-value">280 kg</div>
+                    <div class="kpi-label">Today's absorption</div>
+                </div>
+                
+                <div class="kpi-card">
+                    <div class="kpi-label">System Efficiency</div>
+                    <div class="kpi-value">87%</div>
+                    <div class="kpi-label">Optimal range: 85-90%</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>📊 Growth Performance</h3>
+                <div class="chart-container">
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>⚠️ System Alerts</h3>
+                <div class="alert-list">
+                    <div class="alert-item" style="padding: 10px; margin: 10px 0; background: #fff3cd; border-left: 4px solid #ffc107;">
+                        <strong>Temperature Warning:</strong> Pond temperature reaching 32°C at 2 PM
+                    </div>
+                    <div class="alert-item" style="padding: 10px; margin: 10px 0; background: #d1ecf1; border-left: 4px solid #0dcaf0;">
+                        <strong>Nutrient Advice:</strong> Nitrogen levels optimal, phosphorus slightly low
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulator Page -->
+    <section id="simulator" class="page">
+        <div class="container">
+            <div class="card">
+                <h1>🔬 Biofuel Production Simulator</h1>
+                <p>Test different scenarios and optimize your algae cultivation parameters</p>
+            </div>
+            
+            <div class="card">
+                <h3>🌱 Select Algae Strain</h3>
+                <div class="strain-grid">
+                    <div class="strain-card selected" data-strain="chlorella">
+                        <div class="strain-name">Chlorella Vulgaris</div>
+                        <div class="strain-details">
+                            <div>Lipid Content: 15-22%</div>
+                            <div>Growth Rate: 0.5-2.0 g/L/day</div>
+                            <div>Ideal Temperature: 20-30°C</div>
+                            <div>Best for: Tropical climates like India</div>
+                        </div>
+                    </div>
+                    <div class="strain-card" data-strain="nannochloropsis">
+                        <div class="strain-name">Nannochloropsis</div>
+                        <div class="strain-details">
+                            <div>Lipid Content: 30-40%</div>
+                            <div>Growth Rate: 0.3-0.8 g/L/day</div>
+                            <div>Ideal Temperature: 15-26°C</div>
+                            <div>Best for: High-value oil production</div>
+                        </div>
+                    </div>
+                    <div class="strain-card" data-strain="spirulina">
+                        <div class="strain-name">Spirulina</div>
+                        <div class="strain-details">
+                            <div>Lipid Content: 8-12%</div>
+                            <div>Growth Rate: 1.5-2.5 g/L/day</div>
+                            <div>Ideal Temperature: 25-35°C</div>
+                            <div>Best for: Fast biomass production</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>⚙️ Growth Parameters</h3>
+                <div class="controls">
+                    <div class="control-group">
+                        <label>Temperature (°C): <span id="temp-value">25</span></label>
+                        <input type="range" id="temp-slider" min="15" max="35" value="25" step="1">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>Light Intensity (μmol/m²/s): <span id="light-value">150</span></label>
+                        <input type="range" id="light-slider" min="50" max="300" value="150" step="10">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>CO₂ Concentration (ppm): <span id="co2-value">1000</span></label>
+                        <input type="range" id="co2-slider" min="300" max="2000" value="1000" step="50">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>Nitrogen Level (mg/L): <span id="nitrogen-value">20</span></label>
+                        <input type="range" id="nitrogen-slider" min="5" max="50" value="20" step="1">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>📈 Simulation Results</h3>
+                <div class="dashboard-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Predicted Biomass</div>
+                        <div class="kpi-value" id="biomass-result">1.8 g/L/day</div>
+                        <div class="kpi-label">Daily production</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Oil Yield</div>
+                        <div class="kpi-value" id="oil-result">0.36 g/L/day</div>
+                        <div class="kpi-label">At 20% lipid content</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Production Cost</div>
+                        <div class="kpi-value" id="cost-result">₹76/L</div>
+                        <div class="kpi-label">Estimated</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">CO2 Consumption</div>
+                        <div class="kpi-value" id="co2-result">1.9 kg</div>
+                        <div class="kpi-label">Per kg biomass</div>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="simulationChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Economics Page -->
+    <section id="economics" class="page">
+        <div class="container">
+            <div class="card">
+                <h1>💰 Economic Analysis</h1>
+                <p>Financial planning and ROI calculation for algae biofuel projects in India</p>
+            </div>
+            
+            <div class="scenario-comparison">
+                <div class="scenario">
+                    <h4>Small Scale (1 Hectare)</h4>
+                    <div class="cost-breakdown">
+                        <h5>Initial Investment</h5>
+                        <div class="cost-item">
+                            <span>Pond Construction</span>
+                            <span>₹8,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Equipment</span>
+                            <span>₹12,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Algae Culture</span>
+                            <span>₹1,00,000</span>
+                        </div>
+                        <div class="cost-item cost-total">
+                            <span>Total Capital</span>
+                            <span>₹21,00,000</span>
+                        </div>
+                        
+                        <h5 style="margin-top: 20px;">Annual Operational Costs</h5>
+                        <div class="cost-item">
+                            <span>Nutrients</span>
+                            <span>₹3,60,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Labor (2 people)</span>
+                            <span>₹4,80,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Utilities</span>
+                            <span>₹3,00,000</span>
+                        </div>
+                        <div class="cost-item cost-total">
+                            <span>Total Operational</span>
+                            <span>₹11,40,000</span>
+                        </div>
+                        
+                        <h5 style="margin-top: 20px;">Revenue Projection</h5>
+                        <div class="cost-item">
+                            <span>Algae Oil (40,000 L)</span>
+                            <span>₹36,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Biomass Byproduct</span>
+                            <span>₹4,00,000</span>
+                        </div>
+                        <div class="cost-item cost-total">
+                            <span>Annual Profit</span>
+                            <span>₹28,60,000</span>
+                        </div>
+                        
+                        <div class="kpi-card" style="margin-top: 20px;">
+                            <div class="kpi-label">ROI Period</div>
+                            <div class="kpi-value">9-12 months</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scenario">
+                    <h4>Commercial Scale (10 Hectares)</h4>
+                    <div class="cost-breakdown">
+                        <h5>Initial Investment</h5>
+                        <div class="cost-item">
+                            <span>Land Development</span>
+                            <span>₹70,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Equipment & Systems</span>
+                            <span>₹1,10,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Infrastructure</span>
+                            <span>₹30,00,000</span>
+                        </div>
+                        <div class="cost-item cost-total">
+                            <span>Total Capital</span>
+                            <span>₹2,10,00,000</span>
+                        </div>
+                        
+                        <h5 style="margin-top: 20px;">Annual Operational Costs</h5>
+                        <div class="cost-item">
+                            <span>Nutrients & Inputs</span>
+                            <span>₹35,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Labor (15 people)</span>
+                            <span>₹18,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Utilities & Maintenance</span>
+                            <span>₹25,00,000</span>
+                        </div>
+                        <div class="cost-item cost-total">
+                            <span>Total Operational</span>
+                            <span>₹78,00,000</span>
+                        </div>
+                        
+                        <h5 style="margin-top: 20px;">Revenue Projection</h5>
+                        <div class="cost-item">
+                            <span>Algae Oil (400,000 L)</span>
+                            <span>₹3,60,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Byproducts & Carbon Credits</span>
+                            <span>₹40,00,000</span>
+                        </div>
+                        <div class="cost-item cost-total">
+                            <span>Annual Profit</span>
+                            <span>₹3,22,00,000</span>
+                        </div>
+                        
+                        <div class="kpi-card" style="margin-top: 20px;">
+                            <div class="kpi-label">ROI Period</div>
+                            <div class="kpi-value">8-10 months</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>📊 5-Year Financial Projection</h3>
+                <div class="chart-container">
+                    <canvas id="financeChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Page -->
+    <section id="research" class="page">
+        <div class="container">
+            <div class="card">
+                <h1>🔍 Research & Data Sources</h1>
+                <p>Verified information from scientific research and Indian context</p>
+            </div>
+            
+            <div class="card">
+                <h3>📚 Scientific References</h3>
+                <div class="research-list">
+                    <div class="research-item" style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                        <h4>National Renewable Energy Laboratory (NREL) USA</h4>
+                        <p><strong>Key Finding:</strong> Algae can produce 30 times more energy per acre than land crops</p>
+                        <p><strong>Relevance to India:</strong> Perfect for land-constrained agriculture</p>
+                    </div>
+                    
+                    <div class="research-item" style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                        <h4>Indian Institute of Technology, Delhi</h4>
+                        <p><strong>Key Finding:</strong> Algae growth rates 40% higher in tropical Indian climate</p>
+                        <p><strong>Relevance:</strong> Natural advantage for Indian farmers</p>
+                    </div>
+                    
+                    <div class="research-item" style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                        <h4>TERI - The Energy and Resources Institute</h4>
+                        <p><strong>Key Finding:</strong> Algae can treat wastewater while producing biofuel</p>
+                        <p><strong>Relevance:</strong> Dual benefit for Indian water-scarce regions</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>🌍 Environmental Impact Data</h3>
+                <div class="dashboard-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Carbon Sequestration</div>
+                        <div class="kpi-value">1.8-2.0x</div>
+                        <div class="kpi-label">More CO2 absorbed than emitted</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Water Usage</div>
+                        <div class="kpi-value">80% Less</div>
+                        <div class="kpi-label">Compared to traditional crops</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Land Efficiency</div>
+                        <div class="kpi-value">30x</div>
+                        <div class="kpi-label">More oil per hectare than soy</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Waste Treatment</div>
+                        <div class="kpi-value">Yes</div>
+                        <div class="kpi-label">Can use agricultural runoff</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>🇮🇳 Government Initiatives</h3>
+                <ul style="padding-left: 20px; margin-top: 10px;">
+                    <li>National Policy on Biofuels 2018 - Support for advanced biofuels</li>
+                    <li>Ministry of New and Renewable Energy (MNRE) - Research funding</li>
+                    <li>Startup India - Support for green technology startups</li>
+                    <li>State-level subsidies for renewable energy projects</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>ALGAE-OPT AI | Advanced Algae Biofuel Optimization Platform</p>
+            <p>Data Sources: NREL, IIT Delhi, TERI, Wikipedia, Research Papers</p>
+            <p>By ❤️ Mohd Ali Khan</p>
+        </div>
+    </footer>
+        <script src="app.js"></script>
+</body>
+</html>
